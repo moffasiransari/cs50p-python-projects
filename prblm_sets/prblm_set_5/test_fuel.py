@@ -15,7 +15,7 @@ def test_convert_negtvx():
 
 def test_convert_ngtvy():
     with pytest.raises(ValueError):
-        convert("1/-2")https://submit.cs50.io/users/moffasirasnari/cs50/problems/2022/python/tests/fuel
+        convert("1/-2")
 
 def test_convert_x_greater_y():
     with pytest.raises(ValueError):

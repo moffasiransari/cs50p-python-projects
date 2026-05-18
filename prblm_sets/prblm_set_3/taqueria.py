@@ -19,7 +19,7 @@ def main():
         try:
             item = input("Item: ").title().strip()
         except EOFError: #if user use ctrl+d to exit
-            print(en d="\n") #move to newline and break
+            print(end="\n") #move to newline and break
             break
         if item in menu:
            total_cost=total_cost+ menu[item]
