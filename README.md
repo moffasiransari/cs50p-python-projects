@@ -1,11 +1,12 @@
 # 🐍 CS50P — Introduction to Programming with Python
 
-> My complete journey through Harvard's CS50P course — all problem sets, exercises, and personal projects built along the way.
+> My complete journey through Harvard's CS50P course — all problem sets, exercises, and personal projects built along the way, capped off with my final project: **MedSaver**.
 > Started this before joining college. Every file here is something I wrote, debugged, and learned from.
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python&logoColor=white)
 ![CS50P](https://img.shields.io/badge/Course-CS50P-crimson?style=flat)
-![Status](https://img.shields.io/badge/Status-Week%207%20%E2%9C%85-brightgreen?style=flat)
+![Status](https://img.shields.io/badge/Status-Course%20Complete%20%E2%9C%85-brightgreen?style=flat)
+![Final Project](https://img.shields.io/badge/Final%20Project-MedSaver%20💊-9cf?style=flat)
 ![Self Taught](https://img.shields.io/badge/Self--Taught-Pre--College-orange?style=flat)
 
 ---
@@ -14,6 +15,17 @@
 
 ```
 cs50p-python-projects/
+├── CS50_final_project/    # 🏆 MedSaver — final project
+│   ├── medicin.py
+│   ├── project.py
+│   ├── report.py
+│   ├── database.csv
+│   ├── history.csv
+│   ├── med_report.csv
+│   ├── requirements.txt
+│   ├── test_project.py
+│   ├── MedSaver_Report.pdf
+│   └── README.md
 ├── prblm_sets/
 │   ├── prblm_set_0/      # Functions, Variables
 │   ├── prblm_set_1/      # Conditionals
@@ -22,10 +34,56 @@ cs50p-python-projects/
 │   ├── prblm_set_4/      # Libraries
 │   ├── prblm_set_5/      # Unit Tests
 │   ├── prblm_set_6/      # File I/O
-│   └── prblm_set_7/      # Regular Expressions
+│   ├── prblm_set_7/      # Regular Expressions
+│   ├── prblm_set_8/      # Object-Oriented Programming
+│   └── prblm_set_9/      # Et Cetera
 ├── 1projects/            # My own personal projects
 ├── qs_by_codinx/         # 22+ extra practice problems
 ├── thonny_p/             # Pattern & logic programs
+```
+
+---
+
+## 🏆 Final Project — MedSaver
+
+> **MedSaver — Generic Medicine Finder & Price Comparison**
+> A CLI tool that takes a branded medicine name and returns its generic equivalent, full composition, dosage, safety notes, and a branded-vs-generic price comparison — so people can save money without compromising on treatment.
+
+### What it does
+- Takes a **branded medicine name** as input (e.g. `Allegra`)
+- Looks up the **generic name & composition** (e.g. `Fexofenadine` / `Fexofenadine Hydrochloride`)
+- Flags whether a **doctor's prescription is required**
+- Returns **dosage** and **safety notes** (interactions, warnings, who should avoid it)
+- Runs a **branded vs. generic price comparison** and calculates **savings**
+- Logs every search to a local history file
+- Generates a clean, shareable **PDF report** of the result
+
+### Sample Output (from `MedSaver_Report.pdf`)
+
+| Field | Example |
+|---|---|
+| Input Brand | Allegra |
+| Generic | Fexofenadine |
+| Composition | Fexofenadine Hydrochloride |
+| Doctor Prescription Required? | Yes |
+| Dosage | 120 mg Tablet |
+| Branded Price (₹) | 180.0 |
+| Generic Price (₹) | 75.0 |
+| **Savings (₹)** | **105.0** |
+
+### Built With
+- **Google Gemini API** (`google-genai`, `google-api-core`) — for AI-powered medicine data lookup
+- **Pydantic** — structured, validated data models for medicine info
+- **Rich** — polished, readable CLI output
+- **ReportLab** — auto-generates the PDF report
+- **pytest** — unit testing (`test_project.py`)
+
+```txt
+google-genai==2.6.0
+google-api-core==2.30.3
+pydantic==2.13.4
+rich==15.0.0
+reportlab==4.5.1
 ```
 
 ---
@@ -125,12 +183,30 @@ cs50p-python-projects/
 
 ---
 
-### Set 7 — Regular Expressions[cureently learning]
+### Set 7 — Regular Expressions
 > NUMB3RS, working hours, watch patterns, shirt API
 
 | File | What it does |
 |------|-------------|
 | `numb3rs.py` | Validates IPv4 addresses with regex |
+
+---
+
+### Set 8 — Object-Oriented Programming
+> Classes, inheritance, dunder methods
+
+| File | What it does |
+|------|-------------|
+| _add your files here_ | |
+
+---
+
+### Set 9 — Et Cetera
+> List comprehensions, generators, decorators, and other Python odds & ends
+
+| File | What it does |
+|------|-------------|
+| _add your files here_ | |
 
 ---
 
@@ -164,7 +240,7 @@ Problems I solved from external sources to reinforce concepts:
 
 - **Language:** Python 3.11
 - **Testing:** pytest
-- **Libraries used:** `requests`, `csv`, `re`, `sys`, `pyfiglet`, `emoji`,`pillow`
+- **Libraries used:** `requests`, `csv`, `re`, `sys`, `pyfiglet`, `emoji`, `pillow`, `google-genai`, `google-api-core`, `pydantic`, `rich`, `reportlab`
 - **Editor:** VS Code + Thonny
 - **Course:** [CS50P by Harvard (free on edX)](https://cs50.harvard.edu/python/)
 
@@ -181,13 +257,18 @@ Problems I solved from external sources to reinforce concepts:
 | 4 | Libraries | ✅ Done |
 | 5 | Unit Tests (pytest) | ✅ Done |
 | 6 | File I/O | ✅ Done |
-| 7 | Regular Expressions |  Ongoing |
+| 7 | Regular Expressions | ✅ Done |
+| 8 | Object-Oriented Programming | ✅ Done |
+| 9 | Et Cetera | ✅ Done |
+| 🏆 | **Final Project — MedSaver** | ✅ **Submitted** |
+
+**CS50P: Complete.** 🎓
 
 ---
 
 ## 🙋 About Me
 
-I'm a student from India who started learning Python through CS50P before joining college. This repository is proof of every hour I put in — from simple print statements to writing tests, reading CSVs, and calling live APIs.
+I'm a student from India who started learning Python through CS50P before joining college, and finished the full 10-week course by building **MedSaver**, an AI-powered generic medicine finder and price comparison tool. This repository is proof of every hour I put in — from simple print statements to writing tests, reading CSVs, calling live APIs, and shipping a working final project.
 
 I'm serious about building a career in software development, and this is where it begins.
 
